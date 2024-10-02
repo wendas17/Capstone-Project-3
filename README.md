@@ -47,3 +47,21 @@ Contoh perhitungan: Jika satu nasabah yang melakukan deposito 300 dolar , maka p
 
 Berdasarkan konsekuensinya, maka sebisa mungkin yang akan kita lakukan adalah membuat model yang dapat mengurangi cost pemasaran dari perusahaan tersebut, tetapi tanpa membuat menjadi kurangnya/tidak cukup kandidat potensial yang dibutuhkan perusahaan. Jadi kita ingin sebanyak mungkin prediksi kelas positif yang benar, dengan sesedikit mungkin prediksi false positive. Jadi nanti metric utama yang akan kita gunakan adalah f1 score
 
+# KESIMPULAN
+## Rekomendasi untuk model
+
+Model terbaik yang digunakan yaitu VotingClassifier dengan dilakukan hypertunning mendapatkan hasil lebih tinggi. Dengan Hypermeter  f1 score yang memiliki akurasi 64%
+
+Kelemahan: 
+
+*  Akurasi 64% menunjukkan bahwa model tidak cukup kuat dalam memprediksi nasabah yang akan mengikuti program deposito. Ada potensi kesalahan yang signifikan.Sehingga berpotensi terjadi kesalahan yang menyebabkan hilangnya nasabah potensial (false negatives) atau mengganggu nasabah dengan penawaran yang tidak sesuai (false positives).
+
+* Untuk Pengembangan model dengan model lebih canggih seperti XGBoost  yang sering lebih baik hasil prediksinya dan Peninjauan kembali fitur yang ada 
+
+## Rekomendasi untuk Bisnis
+Bank dapat memanfaatkan fitur positif untuk menambah target dposito  
+
+1. fitur poutcome_success. Jika hasil campaign sebelumnya berhasil, nasabah ini cenderung lebih mungkin merespon positif pada campaign saat ini.
+2. Balance (saldo nasabah) juga signifikan. Nasabah dengan saldo lebih tinggi lebih cenderung untuk merespon positif.
+
+Selain itu Bank juga tidak perlu melakukan penawaran kepada nasabah jika pada fitur housing loan dan personal loan yang dimiliki nasabah cenderung mengurangi kemungkinan mereka merespon positif. Ini bisa mengindikasikan bahwa nasabah yang memiliki kewajiban finansial cenderung tidak merespon secara positif.
